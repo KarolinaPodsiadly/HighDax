@@ -9,7 +9,6 @@
 	<meta content="" name="description">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600" rel="stylesheet">
 	<link href="images/check.png" rel="shortcut icon">
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/carousel.css" rel="stylesheet">
@@ -17,7 +16,7 @@
 </head>
 <body>
 	<section id="main">
-		<nav class="navbar navbar-default navbar-fixed-top">
+		<nav class="navbar navbar-default  navbar-inverse navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
 					<button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button> <a class="navbar-brand" href="#"><img alt="" src="images/logo.png"></a>
@@ -268,31 +267,22 @@
 	</script> 
 	<script>
 	  $(document).ready(function() { 
-
 	   $('a[href^="#"]').on('click', function(event) {
-	   
-	       var target = $( $(this).attr('href') );
-	   
+	       var target = $( $(this).attr('href') );  
 	       if( target.length ) {
 	           event.preventDefault();
 	           $('html, body').animate({
-	               scrollTop: target.offset().top
-	           }, 1000);
+	               scrollTop: target.offset().top - 119
+	           }, 500);
 	       }
 	   });
-
 	});
 	</script> 
 	<script src="https://code.jquery.com/jquery-1.11.3.min.js">
 	</script> 
 	<script src="js/jquery.countTo.js">
 	</script> 
-	<script>
-	   $(document).ready(function(){
-
-	       $('.count').countTo();
-
-	   });
-	</script>
+	<script src="js/nav.js">
+	</script> 
 </body>
 </html>

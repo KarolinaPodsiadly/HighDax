@@ -5,11 +5,8 @@ body {
 	margin: 0 auto;
 	overflow-x: hidden;
 }
-#main, #myCarousel {
+#main {
 	padding-top: 130px;
-}
-#timer h2, #services {
-	padding-top: 180px;
 }
 #main, .navbar-default {
 	font-family: 'Roboto', sans-serif;
@@ -20,9 +17,19 @@ body {
 	background-image:  url(../images/header2.jpg);
 	background-position: 100% 100%;
 }
+nav {
+  	display: block;
+  	z-index: 99999;
+  	transition: all ease .5s;
+}
+nav.shrink {
+  	height: 120px;
+  	transition: all ease .5s;
+  	background: #313236;
+}
+
 .navbar-default {
-	/*background-color: transparent;*/
-	background-color: #313236;
+	background-color: transparent;
 }
 .navbar-header img {
 	position: relative;
@@ -164,7 +171,7 @@ body {
 	color: #0eb493;
 	font-size: 38px;
 	font-weight: 100;
-	padding-top: 100px;
+	padding-top: 30px;
 	margin-bottom: 10px;
 }
 .single-col {
@@ -232,7 +239,7 @@ body {
 	font-weight: 300;
 	font-size: 35px;
 	text-align: center;
-	padding: 180px 0px 150px 0px;
+	padding: 50px 0px;
 }
 #themes p {
 	opacity: 0.9;
@@ -359,32 +366,37 @@ footer img: last child {
 		width: 170px;
 		height: 170px;
 	}
+	.navbar {
+		font-size: 13px;
+	}
+	.navbar .container {
+		margin: 5px 0px;
+	}
+	.navbar ul li {
+    	padding-right: 0;
+	}
 	.navbar-header img {
-		margin-right: 0;
-		left: 70%;
+    	margin-right: 0;
 	}
-	.navbar-nav {
-		margin-top: 30px;
-	}
-	#main, #myCarousel {
-		padding-top: 200px;
-	}
-	#timer h2, #services {
-		padding-top: 250px;
-	}
-	#themes {
-		padding-top: 250px;
+	.navbar ul li a {
+    	padding: 10px 4px;
 	}
 }
 
 /* xs */
 @media (max-width: 767px) {
-	#slider {
-		padding-top: 0;
-	}
 	.navbar-header img {
 		margin-right: 0;
 		width: 250px;
+	}
+	.navbar-default .navbar-toggle:hover .icon-bar {
+    	background-color: #f9812b;
+	}
+	.navbar-header {
+		margin: 20px 0px;
+	}
+	nav.shrink {
+    	height: auto;
 	}
 	#themes {
 		padding: 100px 0px 50px 0px;
@@ -394,7 +406,6 @@ footer img: last child {
 	}
 	.navbar {
 		padding: 20px;
-		margin-bottom: 0;
 	}
 	#contact p {
 		padding: 10px;
@@ -415,12 +426,6 @@ footer img: last child {
 	}
 	.single-col span {
 		font-size: 21px;
-	}
-	#timer h2, #services {
-		padding-top: 50px;
-	}
-	#themes {
-		padding-top: 50px;
 	}
 }
 @media (max-width: 480px) {
